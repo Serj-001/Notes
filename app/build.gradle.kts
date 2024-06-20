@@ -74,4 +74,6 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.6.7")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
+
+    implementation(libs.androidx.navigation.compose)
 }

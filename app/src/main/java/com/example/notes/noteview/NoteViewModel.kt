@@ -1,6 +1,7 @@
 package com.example.notes.noteview
 
 import android.app.Application
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -8,6 +9,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.example.notes.data.Note
 import com.example.notes.data.NoteRoomDatabase
+import java.lang.System.currentTimeMillis
+import java.util.Date
 
 class NoteViewModel(application: Application) : ViewModel() {
 
@@ -29,6 +32,7 @@ class NoteViewModel(application: Application) : ViewModel() {
     fun changeDescription(value: String) {
         noteDescriptionVal = value
     }
+
     fun addNote() {
         repository.addNote(Note(noteTitleVal, noteDescriptionVal))
     }

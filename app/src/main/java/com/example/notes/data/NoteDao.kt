@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface NoteDao {
 
-    @Query("SELECT * FROM notes")
+    @Query("SELECT * FROM notes ORDER BY dateAdded")
     fun getNotes() : LiveData<List<Note>>
 
     @Insert
